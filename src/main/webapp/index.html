@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<body>
+	<div id="chartcontainer">This is just a replacement in case Javascript is not available or used for SEO purposes</div>
+
+	<script src="static/js/jscharts.js"></script>
+	<script type="text/javascript">
+		var myData = new Array(['unit', 20], ['unit two', 10], ['unit three', 30], ['other unit', 10], ['last unit', 30]);
+		var myChart = new JSChart('chartcontainer', 'bar');
+		myChart.setDataArray(myData);
+		myChart.draw();
+
+		// setInterval(function(){
+		// 	myData[0][1] += 20;
+		// 	myChart.draw();
+		// },1000);
+	</script>
+</body>
+</html>
+
