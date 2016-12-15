@@ -22,22 +22,20 @@ public class Question {
     /**
      * 正确答案标识
      */
-    private int rightAnswerId;
+    private String rightAnswer;
 
     /**
      * 所有答案选项列表
      */
-    private List<Integer> answerIdList;
+    private List<Answer> answerList;
 
-    /**
-     * 是否是多选题
-     */
-    private boolean hasMultiAnswer;
+    public List<Answer> getAnswerList() {
+        return answerList;
+    }
 
-    /**
-     * 试题状态(0:不可答题;1:可以答题)
-     */
-    private int status;
+    public void setAnswerList(List<Answer> answerList) {
+        this.answerList = answerList;
+    }
 
     public int getId() {
         return id;
@@ -55,35 +53,11 @@ public class Question {
         this.content = content;
     }
 
-    public int getRightAnswerId() {
-        return rightAnswerId;
+    public String getRightAnswer() {
+        return rightAnswer;
     }
 
-    public void setRightAnswerId(int rightAnswerId) {
-        this.rightAnswerId = rightAnswerId;
-    }
-
-    public List<Integer> getAnswerIdList() {
-        return answerIdList;
-    }
-
-    public void setAnswerIdList(List<Integer> answerIdList) {
-        this.answerIdList = answerIdList;
-    }
-
-    public boolean isHasMultiAnswer() {
-        return hasMultiAnswer;
-    }
-
-    public void setHasMultiAnswer(boolean hasMultiAnswer) {
-        this.hasMultiAnswer = hasMultiAnswer;
-    }
-
-    public int getStatus() {
-        return status;
-    }
-
-    public void setStatus(int status) {
-        this.status = status;
+    public void setRightAnswer(String rightAnswer) {
+        this.rightAnswer = rightAnswer;
     }
 }

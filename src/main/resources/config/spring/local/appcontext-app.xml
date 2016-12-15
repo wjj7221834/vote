@@ -32,6 +32,11 @@
         <property name="prizeDao" ref="prizeDao"/>
     </bean>
 
+    <bean id="questionService" class="com.kobe.vote.service.QuestionService">
+        <property name="questionDao" ref="questionDao"/>
+        <property name="answerDao" ref="answerDao"/>
+    </bean>
+
     <bean id="prizeCandidateService" class="com.kobe.vote.service.PrizeCandidateService">
         <property name="prizeCandidateDao" ref="prizeCandidateDao"/>
     </bean>
@@ -53,6 +58,14 @@
     </bean>
 
     <bean id="voteDao" class="com.kobe.vote.dao.VoteDao">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
+
+    <bean id="answerDao" class="com.kobe.vote.dao.AnswerDao">
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
+    </bean>
+
+    <bean id="questionDao" class="com.kobe.vote.dao.QuestionDao">
         <property name="jdbcTemplate" ref="jdbcTemplate"/>
     </bean>
 

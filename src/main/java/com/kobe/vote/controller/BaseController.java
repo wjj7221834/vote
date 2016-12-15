@@ -25,10 +25,10 @@ public class BaseController {
         }
         String value = new String(Base64.decodeBase64(valueDecoded.getBytes()));
         String[] fields = value.split("_");
-        if (fields.length != 2 || NumberUtils.parseQuitely(fields[1]) == -1) {
+        if (fields.length != 2 || NumberUtils.parseQuietly(fields[1]) == -1) {
             return null;
         }
-        int userId = NumberUtils.parseQuitely(fields[1]);
+        int userId = NumberUtils.parseQuietly(fields[1]);
         return userService.loadByID(userId);
     }
 }
